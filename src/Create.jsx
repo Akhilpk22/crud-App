@@ -15,7 +15,7 @@ function Create() {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:3001/posts", values)
+      .post("https://crud-json-rjqd.onrender.com/posts", values)
       .then((result) => {
         console.log(result);
         navigate("/Home");

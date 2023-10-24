@@ -10,7 +10,7 @@ function Red() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/posts/" + id)
+      .get("https://crud-json-rjqd.onrender.com/posts/" + id)
       .then((result) => setData(result.data))
       .catch((error) => console.log(error));
   }, []);

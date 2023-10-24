@@ -7,7 +7,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/posts")
+      .get("https://crud-json-rjqd.onrender.com/posts")
       .then((result) => setData(result.data))
       .catch((error) => console.log(error));
   }, []);
@@ -16,7 +16,7 @@ function Home() {
     const confirmed = window.confirm("Are you sure you want to delete this item?");
     if (confirmed) {
       axios
-        .delete(`http://localhost:3001/posts/${id}`)
+        .delete(`https://crud-json-rjqd.onrender.com/posts/${id}`)
         .then(() => {
           // Remove the deleted item from the state without refreshing the page
           setData((prevData) => prevData.filter(item => item.id !== id));

@@ -19,7 +19,7 @@ function Update() {
  const  navigate = useNavigate();
   useEffect(() => {
     axios
-      .get("http://localhost:3001/posts/" + id)
+      .get("https://crud-json-rjqd.onrender.com/posts/" + id)
       .then((result) => {
         setValues(result.data);
       })
@@ -30,7 +30,7 @@ function Update() {
     event.preventDefault();
 
     axios
-      .put("http://localhost:3001/posts/"+id, values)
+      .put("https://crud-json-rjqd.onrender.com/posts/"+id, values)
       .then((result) => {
         console.log(result);
         navigate("/Home");
